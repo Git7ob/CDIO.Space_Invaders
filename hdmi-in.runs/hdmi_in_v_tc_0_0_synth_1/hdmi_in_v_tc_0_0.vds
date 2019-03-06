@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Jan 15 17:49:41 2019
+# Process ID: 11904
+# Current directory: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1
+# Command line: vivado.exe -log hdmi_in_v_tc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_in_v_tc_0_0.tcl
+# Log file: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/hdmi_in_v_tc_0_0.vds
+# Journal file: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_in_v_tc_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 336.820 ; gain = 80.066
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_0_0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_in_v_tc_0_0' (11#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:96]
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 497.813 ; gain = 241.059
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 497.813 ; gain = 241.059
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 721.875 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    31|
+|2     |LUT1   |    84|
+|3     |LUT2   |    47|
+|4     |LUT3   |   540|
+|5     |LUT4   |    78|
+|6     |LUT5   |    99|
+|7     |LUT6   |   424|
+|8     |MUXF7  |   134|
+|9     |SRL16E |     6|
+|10    |FDRE   |  2740|
+|11    |FDSE   |   184|
++------+-------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 721.875 ; gain = 465.121
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 721.875 ; gain = 465.746

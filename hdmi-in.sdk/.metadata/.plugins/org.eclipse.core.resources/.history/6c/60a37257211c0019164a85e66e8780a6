@@ -1,0 +1,339 @@
+/*
+ * sd_card.h
+ *
+ *  Created on: 16. jan. 2019
+ *      Author: Hamza
+ */
+
+#ifndef SD_CARD_H_
+#define SD_CARD_H_
+
+// needed for SD card
+#include "xsdps.h"			//SD device driver
+#include "ff.h"				//FAT file definitions
+
+
+/*
+ * SD card test
+ */
+#define HEIGHT 480
+#define WIDTH 680
+//alien size
+#define ALIEN_HEIGHT 32
+#define ALIEN_WIDTH 32
+//Spaceship
+#define SPACESHIP_HEIGHT 32
+#define SPACESHIP_WIDTH 50
+//Player size
+#define PLAYER_HEIGHT 32
+#define PLAYER_WIDTH 32
+//Player shot size
+#define pSHOT_HEIGHT 12
+#define pSHOT_WIDTH 12
+//alien shot size
+#define aSHOT_HEIGHT 12
+#define aSHOT_WIDTH 12
+//Player Death size
+#define pDeath_HEIGHT 32
+#define pDeath_WIDTH 32
+//alien Death size
+#define aDeath_HEIGHT 32
+#define aDeath_WIDTH 32
+//Background
+#define MAP_HEIGHT 480
+#define MAP_WIDTH 680
+//High Score size
+#define LETTER_HEIGHT 32
+#define LETTER_WIDTH 130
+//Bunker size
+#define BUNKER_HEIGHT 40
+#define BUNKER_WIDTH 50
+//Bunker size
+#define GAMEOVER_HEIGHT 360
+#define GAMEOVER_WIDTH 480
+
+#define VSYNC_INTR 67U
+#define LEN(arr) ((int)(sizeof(arr) / sizeof(arr)[0]))
+/*
+ * SD card
+ */
+#define TEST 7
+
+static FIL fil;		/* File object */
+static FATFS fatfs;
+/*
+ * To test logical drive 0, FileName should be "0:/<File name>" or
+ * "<file_name>". For logical drive 1, FileName should be "1:/<file_name>"
+ */
+static char FileName[32];
+static char *SD_File;
+u32 Platform;
+
+//#ifdef _ICCARM_
+//#pragma data_alignment = 32
+//u8 DestinationAddress[10*1024*1024];
+//u8 SourceAddress[10*1024*1024];
+//#pragma data_alignment = 4
+//#else
+u8 DestinationAddress[10*1024*1024] __attribute__ ((aligned(32)));
+u8 SourceAddress[10*1024*1024] __attribute__ ((aligned(32)));
+//#endif
+
+
+//Enemy defaults
+#define alien0YStart 200
+Alien aliens[18] = {
+		{50+20, alien0YStart, 1, 50,  alien0YStart}, //Row 1
+		{150+20,alien0YStart, 1, 150, alien0YStart},
+		{250+20,alien0YStart, 1, 250, alien0YStart},
+		{350+20,alien0YStart, 1, 350, alien0YStart},
+		{450+20,alien0YStart, 1, 450, alien0YStart},
+		{550+20,alien0YStart, 1, 550, alien0YStart},
+
+
+		{50+20, alien0YStart+ALIEN_HEIGHT+10, 1, 50,  alien0YStart+ALIEN_HEIGHT+10}, //Row 2
+		{150+20,alien0YStart+ALIEN_HEIGHT+10, 1, 150, alien0YStart+ALIEN_HEIGHT+10},
+		{250+20,alien0YStart+ALIEN_HEIGHT+10, 1, 250, alien0YStart+ALIEN_HEIGHT+10},
+		{350+20,alien0YStart+ALIEN_HEIGHT+10, 1, 350, alien0YStart+ALIEN_HEIGHT+10},
+		{450+20,alien0YStart+ALIEN_HEIGHT+10, 1, 450, alien0YStart+ALIEN_HEIGHT+10},
+		{550+20,alien0YStart+ALIEN_HEIGHT+10, 1, 550, alien0YStart+ALIEN_HEIGHT+10},
+
+
+		{50+20, (alien0YStart+(ALIEN_HEIGHT*2))+20, 1, 50,  (alien0YStart+(ALIEN_HEIGHT*2))+20}, //Row 3
+		{150+20,(alien0YStart+(ALIEN_HEIGHT*2))+20, 1, 150, (alien0YStart+(ALIEN_HEIGHT*2))+20},
+		{250+20,(alien0YStart+(ALIEN_HEIGHT*2))+20, 1, 250, (alien0YStart+(ALIEN_HEIGHT*2))+20},
+		{350+20,(alien0YStart+(ALIEN_HEIGHT*2))+20, 1, 350, (alien0YStart+(ALIEN_HEIGHT*2))+20},
+		{450+20,(alien0YStart+(ALIEN_HEIGHT*2))+20, 1, 450, (alien0YStart+(ALIEN_HEIGHT*2))+20},
+		{550+20,(alien0YStart+(ALIEN_HEIGHT*2))+20, 1, 550, (alien0YStart+(ALIEN_HEIGHT*2))+20},
+
+};
+Alien aliensDefault[18];
+
+
+Alien spaceships = {WIDTH-SPACESHIP_WIDTH, 0, 0, WIDTH-SPACESHIP_WIDTH, 0};
+Alien spaceshipsDefault;
+
+// Custom variables
+u8 map[MAP_HEIGHT*MAP_WIDTH*3];
+
+u8 alien0[ALIEN_HEIGHT*ALIEN_WIDTH*3];
+u8 alien1[ALIEN_HEIGHT*ALIEN_WIDTH*3];
+u8 alien2[ALIEN_HEIGHT*ALIEN_WIDTH*3];
+u8 alien3[ALIEN_HEIGHT*ALIEN_WIDTH*3];
+u8 alien4[ALIEN_HEIGHT*ALIEN_WIDTH*3];
+u8 alien5[ALIEN_HEIGHT*ALIEN_WIDTH*3];
+
+u8 spaceship[SPACESHIP_HEIGHT*SPACESHIP_WIDTH*3];
+
+u8 player[SPACESHIP_HEIGHT*SPACESHIP_WIDTH*3];
+
+
+int SD(){
+	FRESULT Res;
+	UINT NumBytesRead;
+	u32 BuffCnt;
+	u32 FileSize = (8*1024*1024);
+	/*
+	 * To test logical drive 0, Path should be "0:/"
+	 * For logical drive 1, Path should be "1:/"
+	 */
+	TCHAR *Path = "0:/";
+
+	Platform = XGetPlatform_Info();
+	if (Platform == XPLAT_ZYNQ_ULTRA_MP) {
+		/*
+		 * Since 8MB in Emulation Platform taking long time, reduced
+		 * file size to 8KB.
+		 */
+		FileSize = 8*1024;
+	}
+
+	for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
+		SourceAddress[BuffCnt] = TEST + BuffCnt;
+	}
+
+	/*
+	 * Register volume work area, initialize device
+	 */
+	Res = f_mount(&fatfs, Path, 0);
+
+	if (Res != FR_OK) {
+		xil_printf("INI RES = %d\n", Res);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Open file with required permissions.
+	 * Here - Creating new file with read/write permissions. .
+	 * To open file with write permissions, file system should not
+	 * be in Read Only mode.
+	 */
+	SD_File = (char *)FileName;
+
+	Res = f_open(&fil, SD_File, FA_READ);
+	if (Res) {
+		xil_printf("OPEN RES = %d\n", Res);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+	Res = f_lseek(&fil, 0);
+	if (Res) {
+		xil_printf("SEEK RES = %d\n", Res);
+		return XST_FAILURE;
+	}
+/*
+
+	Res = f_lseek(&fil, 0);
+	if (Res) {
+		xil_printf("SEEK2 RES = %d\n", Res);
+		return XST_FAILURE;
+	}
+*/
+	/*
+	 * Read data from file.
+	 */
+	Res = f_read(&fil, (void*)DestinationAddress, FileSize,
+			&NumBytesRead);
+	if (Res) {
+		xil_printf("Read Data RES = %d\n", Res);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Close file.
+	 */
+	Res = f_close(&fil);
+	if (Res) {
+		xil_printf("Close\n");
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+void pictureInit() {
+	//Aliens
+	memcpy(FileName, "Alien1_1.ppm", 32);
+	SD();
+	memcpy(alien0, DestinationAddress, LEN(alien0));
+
+	memcpy(FileName, "Alien1_2.ppm", 32);
+	SD();
+	memcpy(alien1, DestinationAddress, LEN(alien1));
+
+	memcpy(FileName, "Alien2_1.ppm", 32);
+	SD();
+	memcpy(alien2, DestinationAddress, LEN(alien2));
+
+	memcpy(FileName, "Alien2_2.ppm", 32);
+	SD();
+	memcpy(alien3, DestinationAddress, LEN(alien3));
+
+	memcpy(FileName, "Alien3_1.ppm", 32);
+	SD();
+	memcpy(alien4, DestinationAddress, LEN(alien4));
+
+	memcpy(FileName, "Alien3_2.ppm", 32);
+	SD();
+	memcpy(alien5, DestinationAddress, LEN(alien5));
+	//Spaceship
+	memcpy(FileName, "Spaceship.ppm", 32);
+	SD();
+	memcpy(spaceship, DestinationAddress, LEN(spaceship));
+	//Player
+	memcpy(FileName, "Player.ppm", 32);
+	SD();
+	memcpy(player, DestinationAddress, LEN(player));
+		//Map
+	memcpy(FileName, "Space.ppm", 32);
+	SD();
+	memcpy(map, DestinationAddress, LEN(map));
+}
+
+void picturePrint(u8 *frame, u8 *picture, int x, int y, int height, int width, int remove) {
+	x *= 3;
+	int frameStride = DEMO_STRIDE;
+	int pictureStride = width*3;
+	int i, j, koord, pictureKoord;
+
+	for(i = y; i < height + y; i += 1) {
+		for(j = x; j < pictureStride + x; j += 3) {
+			koord = i*frameStride + j;
+			pictureKoord = (i - y)*pictureStride + (j - x);
+			if(remove == 0) {
+				if(!(picture[pictureKoord + 1] == 0 && picture[pictureKoord + 2] == 255 && picture[pictureKoord + 0] == 255)){
+					frame[koord] = picture[pictureKoord + 1];
+					frame[koord + 1] = picture[pictureKoord + 2];
+					frame[koord + 2] = picture[pictureKoord + 0];
+				}
+			}
+			else {
+				frame[koord] = map[koord + 1];
+				frame[koord + 1] = map[koord + 2];
+				frame[koord + 2] = map[koord + 0];
+				xil_printf("RIP");
+
+			}
+		}
+	}
+}
+
+/* Kept for testiung purposes but should be deleted and implemented elsewhere (@16/01 2019 ) */
+void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int screen_state)
+{
+	u32 xcoi, ycoi;
+	u32 iPixelAddr;
+	u8 wRed, wBlue, wGreen;
+	u32 xleft, xright, ytop, ybtm;
+	int frameCnt;
+
+	switch (screen_state)
+	{
+	case SCREEN_STATE_1:	//Start game screen
+		break;
+	case SCREEN_STATE_2:	//In-game screen
+
+	for(frameCnt = 0; frameCnt < 100; frameCnt++){
+
+		xleft = (width*3)/4 + frameCnt;
+		xright = 3*(width*3)/4 + frameCnt;
+		ytop = height/4;
+		ybtm = 3*height/4;
+
+		for(xcoi = 0; xcoi < (width*3); xcoi+=3){
+
+			iPixelAddr = xcoi;
+
+			for(ycoi = 0; ycoi < height; ycoi++){
+
+				if(xcoi>xleft && xcoi<xright && ycoi>ytop && ycoi<ybtm){
+					picturePrint(frame, spaceship, 150, 150, SPACESHIP_HEIGHT, SPACESHIP_WIDTH, 0);
+				} else {
+					wRed = 255;
+					wBlue = 255;
+					wGreen = 255;
+				}
+
+				frame[iPixelAddr] = wGreen;
+				frame[iPixelAddr + 1] = wBlue;
+				frame[iPixelAddr + 2] = wRed;
+
+				iPixelAddr += stride;
+
+			}
+		}
+		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+		}
+		break;
+	case SCREEN_STATE_3:	//Game over screen
+		break;
+		default:
+		xil_printf("Error: invalid pattern passed to DemoPrintTest");
+	}
+}
+
+
+#endif /* SD_CARD_H_ */

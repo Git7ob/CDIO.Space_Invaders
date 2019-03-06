@@ -1,0 +1,8 @@
+12:28:37 **** Incremental Build of configuration Debug for project standalone_bsp_1_xilffs_polled_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Ingenting at gøre for 'main-build'.
+
+12:28:37 Build Finished (took 255ms)
+

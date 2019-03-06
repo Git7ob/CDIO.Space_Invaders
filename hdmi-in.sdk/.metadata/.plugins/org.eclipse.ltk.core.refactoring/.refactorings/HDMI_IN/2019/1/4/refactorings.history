@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;HDMI_IN/src/sprites/sprites (1).h&apos; to &apos;sprites.h&apos;" description="Rename resource &apos;sprites (1).h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/sprites/sprites (1).h" name="sprites.h" stamp="1548169494972" updateReferences="true"/>
+</session>

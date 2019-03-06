@@ -1,0 +1,142 @@
+/************************************************************************/
+/*																		*/
+/*	video_demo.h	--	ZYBO Video demonstration 						*/
+/*																		*/
+/************************************************************************/
+/*	Author: Sam Bobrowicz												*/
+/*	Copyright 2015, Digilent Inc.										*/
+/************************************************************************/
+/*  Module Description: 												*/
+/*																		*/
+/*		This file contains code for running a demonstration of the		*/
+/*		Video input and output capabilities on the ZYBO. It is a good	*/
+/*		example of how to properly use the display_ctrl and				*/
+/*		video_capture drivers.											*/
+/*																		*/
+/*																		*/
+/************************************************************************/
+/*  Revision History:													*/
+/* 																		*/
+/*		11/25/2015(SamB): Created										*/
+/*																		*/
+/************************************************************************/
+#ifndef VIDEO_DEMO_H_
+#define VIDEO_DEMO_H_
+
+#include "xil_types.h"
+#include "display_ctrl/display_ctrl.h"
+#include "intc/intc.h"
+#include <stdio.h>
+#include "xuartps.h"
+#include "math.h"
+#include <ctype.h>
+#include <stdlib.h>
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "timer_ps/timer_ps.h"
+#include "xparameters.h"
+#include "interrupts.h"
+
+/*
+ * XPAR redefines
+ */
+#define DYNCLK_BASEADDR XPAR_AXI_DYNCLK_0_BASEADDR
+#define VGA_VDMA_ID XPAR_AXIVDMA_0_DEVICE_ID
+#define DISP_VTC_ID XPAR_VTC_0_DEVICE_ID
+#define VID_VTC_IRPT_ID XPS_FPGA3_INT_ID
+#define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
+#define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+/* ------------------------------------------------------------ */
+/*					Miscellaneous Declarations					*/
+/* ------------------------------------------------------------ */
+
+#define SCREEN_STATE_1 1
+#define SCREEN_STATE_2 2
+#define SCREEN_STATE_3 3
+
+#define DEMO_MAX_FRAME (640*480*3)
+#define DEMO_STRIDE (640 * 3)
+
+
+/* ------------------------------------------------------------ */
+/*				Global Variables								*/
+/* ------------------------------------------------------------ */
+
+/*
+ * Display and Video Driver structs
+ */
+DisplayCtrl dispCtrl;
+XAxiVdma vdma;
+INTC intc;
+char fRefresh; //flag used to trigger a refresh of the Menu on video detect
+
+
+
+/*
+ * Framebuffers for video data: frameBufA is front-buffer (here we read from) frameBufB is back-buffer (here we write to)
+ * which currently only supports one frame at a time
+ */
+u8 frameBufA[DEMO_MAX_FRAME];
+u8 frameBufB[DEMO_MAX_FRAME];
+u8 *ptr_frameBufA;
+u8 *ptr_frameBufB;
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/*				Include File Definitions						*/
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+/*
+ * Configure the Video capture driver to start streaming on signal
+ * detection
+ */
+#define DEMO_START_ON_DET 1
+
+
+typedef struct {
+	u32 ytop;
+	u32 ybtm;
+	u32 xLeft;
+	u32 xRight;
+} Alien;
+
+Alien alienNest[30];		//array of 30 aliens
+u8 step;
+
+/* ------------------------------------------------------------ */
+/*					Procedure Declarations						*/
+/* ------------------------------------------------------------ */
+
+void DemoInitialize();
+void DemoRun();
+void DemoPrintMenu();
+void DemoChangeRes();
+void DemoCRMenu();
+void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride);
+void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int screen_state);
+void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride);
+void DemoISR(void *callBackRef, void *pVideo);
+
+
+void DrawFrame(Alien *alienArr, u8 *frame, u32 width, u32 height, u32 stride, u8 step);
+void SwapBuf();
+
+
+
+/* ------------------------------------------------------------ */
+
+
+/************************************************************************/
+
+#endif /* VIDEO_DEMO_H_ */

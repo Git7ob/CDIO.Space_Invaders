@@ -1,0 +1,487 @@
+/************************************************************************/
+/*																		*/
+/*	video_demo.c	--	ZYBO Video demonstration 						*/
+/*																		*/
+/************************************************************************/
+/*	Author: Sam Bobrowicz												*/
+/*	Copyright 2015, Digilent Inc.										*/
+/************************************************************************/
+/*  Module Description: 												*/
+/*																		*/
+/*		This file contains code for running a demonstration of the		*/
+/*		Video input and output capabilities on the ZYBO. It is a good	*/
+/*		example of how to properly use the display_ctrl and				*/
+/*		video_capture drivers.											*/
+/*																		*/
+/*																		*/
+/************************************************************************/
+/*  Revision History:													*/
+/* 																		*/
+/*		11/25/2015(SamB): Created										*/
+/*																		*/
+/************************************************************************/
+
+/* ------------------------------------------------------------ */
+/*				Include File Definitions						*/
+/* ------------------------------------------------------------ */
+
+#include "video_demo.h"		// our structure and prodecure definitions is in here
+#include "display_ctrl/display_ctrl.h"
+#include "intc/intc.h"
+#include <stdio.h>
+#include "xuartps.h"
+#include "math.h"
+#include <ctype.h>
+#include <stdlib.h>
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "timer_ps/timer_ps.h"
+#include "xil_exception.h"
+#include "xparameters.h"
+#include "xsdps.h"
+#include "BTNInterrupt/interrupts.h"		//intterupts lib
+#include "xtime_l.h"
+#include "sprites/sprites.h"
+#include "ff.h"
+#include "platform/platform.h"
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/*				Defines	macro definitions						*/
+/* ------------------------------------------------------------ */
+
+/*
+ * XPAR redefines
+ */
+#define DYNCLK_BASEADDR XPAR_AXI_DYNCLK_0_BASEADDR
+#define VGA_VDMA_ID XPAR_AXIVDMA_0_DEVICE_ID
+#define DISP_VTC_ID XPAR_VTC_0_DEVICE_ID
+#define VID_VTC_IRPT_ID XPS_FPGA3_INT_ID
+#define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
+#define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+
+
+/*
+ * Timer definitons
+ */
+#define TMR_LOAD				833333 //counts per millisecond
+#define INTC_TMR_INTERRUPT_ID 	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+#define TMR_DEVICE				XPAR_TMRCTR_0_DEVICE_ID
+
+
+
+/* ------------------------------------------------------------ */
+/*				Global Variables								*/
+/* ------------------------------------------------------------ */
+
+
+/*
+ * Framebuffers for video/vga data out
+ */
+u8 frameBufA[DEMO_MAX_FRAME];	//front-buffer (read from)
+u8 frameBufB[DEMO_MAX_FRAME];	//back-buffer (write to)
+u8 *ptr_frameBufA;
+u8 *ptr_frameBufB;
+
+Enemy alienNest[30];			//array of 30 aliens
+Hero hero;		//array of heros (curently just 1)
+
+int opt;
+int skew;
+int xMove;
+int yMove;
+int alienSpeed;
+/*
+ * Display and Video Driver structs
+ */
+DisplayCtrl dispCtrl;
+XAxiVdma vdma;
+INTC intc;
+char fRefresh; //flag used to trigger a refresh of the Menu on video detect
+
+FATFS FS_instance;
+
+int result;
+FIL file;
+
+TCHAR *Path = "0:/";
+
+FRESULT Res;
+UINT NumBytesRead;
+u32 BuffCnt;
+const TCHAR* log_file;
+char FileName[50];
+
+
+int main(void)
+{
+	skew = 0;	//init incrementing value for alien movement
+	xMove = 0;
+	yMove = 0;
+
+
+	/* Interrupt initialization */
+	int status;
+	// Initialize Push Buttons
+	status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Set all buttons direction to inputs
+	XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+
+	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+
+	DemoInitialize();					// init device drivers for screen
+	ptr_frameBufB = frameBufB;			//set pointer to back-buffer
+
+
+
+	while(1){
+
+
+
+		DefineHero(dispCtrl.vMode.width, dispCtrl.vMode.height,skew);
+		DrawFrame(1, ptr_frameBufB, dispCtrl.vMode.width , dispCtrl.vMode.height, DEMO_STRIDE);	//draw frame into back-buffer
+
+		DefineAlien(dispCtrl.vMode.width, dispCtrl.vMode.height, xMove, yMove);
+		DrawFrame(2, ptr_frameBufB, dispCtrl.vMode.width , dispCtrl.vMode.height, DEMO_STRIDE);
+
+		moveHero();
+		moveAliens();
+
+		SwapBuf();																				//copy back-buffer into front-buffer
+		//TimerDelay(10);
+
+
+	}
+	
+	return 0;
+}
+
+void moveAliens(){
+	switch(moveAlien){
+
+	case start:
+		if(xMove < 1100)
+			moveAlien = xIncr;
+		else moveAlien = start;
+	break;
+
+	case xIncr:
+		xMove++;
+		if(alienNest[29].xLeft == hero.ytop)
+			moveAlien = gameOver;
+		if(xMove == 1100)
+			moveAlien = moveDown;
+		else moveAlien = xIncr;
+	break;
+
+	case xDecr:
+		xMove--;
+		if(xMove == 70)
+			moveAlien = moveDown;
+		else moveAlien = xDecr;
+	break;
+
+	case moveDown:
+		yMove +=50;
+		if(xMove == 1100)
+			moveAlien = xDecr;
+		else if(xMove == 70)
+			moveAlien = xIncr;
+		break;
+
+	case gameOver:
+		GameOver();
+		moveAlien = start;
+	}
+
+TimerDelay(100);
+
+}
+
+void GameOver(u8 *frame, u32 width, u32 height, u32 stride){
+
+	u32 xcoi, ycoi;
+	u32 iPixelAddr;
+	u8 wRed, wBlue, wGreen;
+
+	wGreen = 0;
+	wRed = 0;
+	wBlue = 0;
+
+	for(xcoi = 0; xcoi < (width*3); xcoi+=3)
+	{
+		iPixelAddr = xcoi + 150*stride;
+		for(ycoi = 276; ycoi < height-20; ycoi++)
+		{
+			frame[iPixelAddr] = wGreen;
+			frame[iPixelAddr + 1] = wBlue;
+			frame[iPixelAddr + 2] = wRed;
+
+			iPixelAddr += stride;
+
+		}
+	}
+
+	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+}
+
+void DemoInitialize()
+{
+	int Status;
+	XAxiVdma_Config *vdmaConfig;
+
+	//initialize pointer to front-buffer (frameBufA)
+	ptr_frameBufA = frameBufA;
+
+
+
+	/*
+	 * Initialize a timer used for a simple delay
+	 */
+	TimerInitialize(SCU_TIMER_ID);
+
+
+	// Initialize VDMA driver
+	vdmaConfig = XAxiVdma_LookupConfig(VGA_VDMA_ID);
+	if (!vdmaConfig)
+	{
+		xil_printf("No video DMA found for ID %d\r\n", VGA_VDMA_ID);
+		return;
+	}
+	Status = XAxiVdma_CfgInitialize(&vdma, vdmaConfig, vdmaConfig->BaseAddress);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("VDMA Configuration Initialization failed %d\r\n", Status);
+		return;
+	}
+
+	/*
+	 * Initialize the Display controller and start it
+	 */
+	Status = DisplayInitialize(&dispCtrl, &vdma, DISP_VTC_ID, DYNCLK_BASEADDR, &ptr_frameBufA, DEMO_STRIDE);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Display Ctrl initialization failed during demo initialization%d\r\n", Status);
+		return;
+	}
+	Status = DisplayStart(&dispCtrl);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Couldn't start display during demo initialization%d\r\n", Status);
+		return;
+	}
+	SDwrite(2,3,4,5);
+	return;
+}
+
+void SwapBuf(){
+
+	int frameBufLen;
+	frameBufLen = sizeof(frameBufB);
+
+	memcpy(frameBufA, frameBufB, frameBufLen);							//copy frame from back-buffer to front-buffer
+	memset(frameBufB, 0, frameBufLen);									//clear back-buffer
+	Xil_DCacheFlushRange((unsigned int) frameBufA, DEMO_MAX_FRAME);		//print from  front-buffer
+
+}
+
+
+void DefineAlien(u32 width, u32 height, u32 xMove, u32 yMove){
+
+	u8 i;
+
+	u32 wh;						//width/height of enemy (is quadratic)
+	u32 offset;					//offset of enemy relative to the enemy on the left hand side
+	u32 margin;					//margin for aliens from screen edges
+	u8 alienArrLen;
+
+	//init param
+	alienArrLen = 30;
+
+	margin = width/5;
+	wh = (width-margin)/20;
+	offset = (width-margin-(alienArrLen/3)*wh)/((alienArrLen/3)+1);
+
+
+			//initialize alien positions in top of screen (3 rows with 10 aliens in each row)
+			for(i=0; i<alienArrLen; i++){
+
+				if(i < 10){
+					alienNest[i].xLeft = xMove+((i+1)+i*3*wh);				//first row
+					alienNest[i].xRight = alienNest[i].xLeft + 3*wh;
+					alienNest[i].ytop = (0.125*height-0.5*wh)+yMove;
+					alienNest[i].ybtm = alienNest[i].ytop+wh;
+				}else if(i < 20){
+					alienNest[i].xLeft = xMove+((i+1-10)+(i-10)*3*wh);		//second row
+					alienNest[i].xRight = alienNest[i].xLeft + 3*wh;
+					alienNest[i].ytop = (0.125*height-0.5*wh+1.5*wh)+yMove;
+					alienNest[i].ybtm = alienNest[i].ytop+wh;
+				}else if(i <30){
+					alienNest[i].xLeft = xMove+((i+1-20)+(i-20)*3*wh);		//third row
+					alienNest[i].xRight = alienNest[i].xLeft + 3*wh;
+					alienNest[i].ytop = (0.125*height-0.5*wh+3*wh)+yMove;
+					alienNest[i].ybtm = alienNest[i].ytop+wh;
+				}
+			}
+}
+void DefineHero(u32 width, u32 height, s32 skew){
+
+	u32 wh;
+	u8 margin;
+
+	//init param
+	wh = 32;		//wh=width/height of hero (quadratic)
+	margin = 2*wh;
+
+
+	hero.xLeft = (0.5*width-0.5*wh)*3+(3*skew);
+	hero.xRight = hero.xLeft + wh*3;
+	hero.ytop = height-0.5*margin;
+	hero.ybtm = hero.ytop+wh;
+
+}
+
+
+void DrawFrame(u8 opt, u8 *frame, u32 width, u32 height, u32 stride){
+
+		u8 i;
+		u8 alienArrLen;
+		u32 wh;
+		u32 margin;
+
+		//screen
+		u32 xcoi, ycoi;				//x,y coordinates of screen
+		u32 iPixelAddr;				//running index of pixel addresses
+
+			if(opt == 1){			//OPT 1 = draw player
+
+				//init param
+				wh = hero.ybtm-hero.ytop;
+				for(xcoi=0; xcoi<wh*3; xcoi+=3){
+
+					iPixelAddr = (hero.ytop-1)*stride+hero.xLeft + xcoi;
+
+					for(ycoi=0; ycoi<(hero.ybtm-hero.ytop-1);ycoi++){
+						frame[iPixelAddr] = 255;
+						frame[iPixelAddr+1] = 0;
+						frame[iPixelAddr+2] = 0;
+
+						iPixelAddr += stride;
+					}
+				}
+			}
+			if(opt == 2){			//OPT 2 = draw aliens
+
+				//init param
+				alienArrLen = 30;
+				margin = width/5;
+				u32 iSprite;
+
+				//checking for all aliens coordinates (in oppose for all pixels on screen)
+				for(i=0;i<alienArrLen; i++){
+					wh = 32;//alienNest[i].ybtm-alienNest[i].ytop;
+					iSprite = 0;
+
+					for(xcoi=0;xcoi<wh*3;xcoi+=3){
+						iPixelAddr = (alienNest[i].ytop-1)*stride+alienNest[i].xLeft + xcoi;
+
+						for(ycoi=0;ycoi<wh;ycoi++){
+
+								if(Alien1_1[iSprite] != 128)
+									frame[iPixelAddr] = Alien1_1[iSprite];
+								if(Alien1_1[iSprite+1] != 128)
+									frame[iPixelAddr+1] = Alien1_1[iSprite+1];
+								if(Alien1_1[iSprite+2] != 128)
+									frame[iPixelAddr+2] = Alien1_1[iSprite+2];
+
+							iPixelAddr += stride;
+							iSprite += 3;
+						}
+					}
+				}
+
+			}
+}
+
+void moveHero(){
+
+	int xRightMax = 300;
+	int xLeftMax = -300;		// form origin, in which the player was defined to be.
+
+	switch(movePlayer){
+	case init:
+		movePlayer = wait;
+	break;
+	case wait:
+		if(btns == btnRight && skew < xRightMax)
+			movePlayer = moveRight;
+		else if (btns == btnLeft && skew > xLeftMax)
+			movePlayer = moveLeft;
+	break;
+	case moveRight:
+		skew+=2;
+		movePlayer = wait;
+	break;
+	case moveLeft:
+		skew-=2;
+		movePlayer = wait;
+	break;
+	}
+}
+
+void SDread(){
+
+	init_platform();
+
+	result = f_mount(&FS_instance, Path, 1);
+
+
+	sprintf(FileName, "file.txt");
+
+	log_file = (char *) FileName;
+
+	result = f_open(&file, log_file, FA_READ);
+
+	char SDArr[4];
+
+	result = f_read(&file, (void*)(char*)SDArr, sizeof(SDArr), &NumBytesRead);
+
+	printf("read highscore data = %s\n\r", (char*)SDArr);
+
+	result = f_close(&file);
+
+	cleanup_platform();
+}
+
+void SDwrite(int num1,int num2,int num3,int num4){
+
+
+	init_platform();
+
+	result = f_mount(&FS_instance, Path, 1);
+
+	sprintf(FileName, "file.txt");
+
+	log_file = (char*)FileName;
+
+	result = f_open(&file, log_file, FA_CREATE_ALWAYS | FA_WRITE);
+
+	char arr[8];
+
+	sprintf(arr,"%d%d%d%d", num1,num2,num3,num4);
+
+	result = f_write(&file, (const void*)(char*)arr, sizeof(arr), &NumBytesRead);
+
+	result = f_close(&file);
+
+	cleanup_platform();
+}

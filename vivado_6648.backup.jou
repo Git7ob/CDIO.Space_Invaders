@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jan 20 19:29:34 2019
+# Process ID: 6648
+# Current directory: C:/Users/hamza/Documents/Space_Invaders
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7072 C:\Users\hamza\Documents\Space_Invaders\hdmi-in.xpr
+# Log file: C:/Users/hamza/Documents/Space_Invaders/vivado.log
+# Journal file: C:/Users/hamza/Documents/Space_Invaders\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only C:/Users/hamza/Documents/Space_Invaders/hdmi-in.xpr
+launch_sdk -workspace C:/Users/hamza/Documents/Space_Invaders/hdmi-in.sdk -hwspec C:/Users/hamza/Documents/Space_Invaders/hdmi-in.sdk/hdmi_in_wrapper.hdf
+launch_sdk -workspace C:/Users/hamza/Documents/Space_Invaders/hdmi-in.sdk -hwspec C:/Users/hamza/Documents/Space_Invaders/hdmi-in.sdk/hdmi_in_wrapper.hdf
+launch_sdk -workspace C:/Users/hamza/Documents/Space_Invaders/hdmi-in.sdk -hwspec C:/Users/hamza/Documents/Space_Invaders/hdmi-in.sdk/hdmi_in_wrapper.hdf

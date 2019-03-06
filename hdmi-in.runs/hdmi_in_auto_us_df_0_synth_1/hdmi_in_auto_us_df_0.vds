@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Jan 15 17:56:17 2019
+# Process ID: 1112
+# Current directory: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_auto_us_df_0_synth_1
+# Command line: vivado.exe -log hdmi_in_auto_us_df_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_in_auto_us_df_0.tcl
+# Log file: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_auto_us_df_0_synth_1/hdmi_in_auto_us_df_0.vds
+# Journal file: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_auto_us_df_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_in_auto_us_df_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 348.668 ; gain = 85.258
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_us_df_0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/synth/hdmi_in_auto_us_df_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_13_top' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14450]
+INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_13_axi_upsizer' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
+INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_13_r_upsizer_pktfifo' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:11244]
+INFO: [Synth 8-638] synthesizing module 'RAMB18E1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
+INFO: [Synth 8-256] done synthesizing module 'RAMB18E1' (1#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
+INFO: [Synth 8-256] done synthesizing module 'axi_dwidth_converter_v2_1_13_r_upsizer_pktfifo' (20#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:11244]
+INFO: [Synth 8-638] synthesizing module 'axi_dwidth_converter_v2_1_13_a_upsizer' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-256] done synthesizing module 'axi_dwidth_converter_v2_1_13_a_upsizer' (21#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axi_register_slice' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:791]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (22#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice' (23#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized0' (23#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized1' (23#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized2' (23#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized3' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice__parameterized3' (23#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (24#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axi_register_slice' (25#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:791]
+INFO: [Synth 8-256] done synthesizing module 'axi_dwidth_converter_v2_1_13_axi_upsizer' (26#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
+INFO: [Synth 8-256] done synthesizing module 'axi_dwidth_converter_v2_1_13_top' (27#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/3bde/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14450]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_in_auto_us_df_0' (28#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_us_df_0/synth/hdmi_in_auto_us_df_0.v:58]
+Finished RTL Elaboration : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 483.531 ; gain = 220.121
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 483.531 ; gain = 220.121
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 701.211 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:28 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:01:28 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:28 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 701.211 ; gain = 437.801
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+|Module Name                                                                                                                 | RTL Object                                                                                               | Inference      | Size (Depth x Width) | Primitives                 | 
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+|inst/\gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar     | inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 61              | RAM32M x 11                | 
+|inst/\gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/s_cmd_fifo        | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg                            | User Attribute | 32 x 28              | RAM32M x 5                 | 
+|inst/\gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/m_cmd_fifo        | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg                            | User Attribute | 32 x 20              | RAM32M x 4                 | 
+|inst/\gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg                            | User Attribute | 512 x 4              | RAM64X1D x 8  RAM64M x 8   | 
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+----------------+----------------------+----------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Timing Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:43 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:01:43 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     6|
+|2     |LUT1     |    36|
+|3     |LUT2     |    44|
+|4     |LUT3     |    47|
+|5     |LUT4     |    78|
+|6     |LUT5     |    87|
+|7     |LUT6     |   135|
+|8     |MUXCY    |    20|
+|9     |RAM32M   |    20|
+|10    |RAM64M   |     8|
+|11    |RAMB18E1 |     2|
+|12    |FDCE     |    21|
+|13    |FDPE     |    27|
+|14    |FDRE     |   414|
+|15    |FDSE     |    15|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:01:44 . Memory (MB): peak = 701.211 ; gain = 437.801
+synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:47 . Memory (MB): peak = 701.211 ; gain = 445.441

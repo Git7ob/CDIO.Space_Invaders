@@ -1,0 +1,13 @@
+/*
+ * SD_config.h
+ *
+ *  Created on: 20. jan. 2019
+ *      Author: Hamza
+ */
+
+#ifndef SRC_PLATFORM_SD_CONFIG_H_
+#define SRC_PLATFORM_SD_CONFIG_H_
+
+
+
+#endif /* SRC_PLATFORM_SD_CONFIG_H_ */

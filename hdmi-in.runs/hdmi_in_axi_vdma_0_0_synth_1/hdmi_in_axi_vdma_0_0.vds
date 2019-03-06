@@ -1,0 +1,337 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Jan 15 17:50:26 2019
+# Process ID: 7972
+# Current directory: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_axi_vdma_0_0_synth_1
+# Command line: vivado.exe -log hdmi_in_axi_vdma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_in_axi_vdma_0_0.tcl
+# Log file: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_axi_vdma_0_0_synth_1/hdmi_in_axi_vdma_0_0.vds
+# Journal file: C:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.runs/hdmi_in_axi_vdma_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_in_axi_vdma_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 348.617 ; gain = 81.055
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_vdma_0_0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/synth/hdmi_in_axi_vdma_0_0.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:69480]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_rst_module' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:16457]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reset' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:14862]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (1#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (1#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reset' (2#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:14862]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_rst_module' (3#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:16457]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_if' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:39644]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_lite_if' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:16952]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (3#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_lite_if' (4#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:16952]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (4#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_if' (5#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:39644]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_intrpt' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:40370]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_intrpt' (6#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:40370]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mm2s_axis_dwidth_converter' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:68170]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axis_dwidth_converter' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1938]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_upsizer' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1191]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_upsizer' (7#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1191]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_downsizer' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1558]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_downsizer' (8#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1558]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axis_register_slice' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:979]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_axis2vector' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:63]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_axis2vector' (9#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:63]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axisc_register_slice' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:391]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axisc_register_slice' (10#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:391]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_vector2axis' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:228]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_vector2axis' (11#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:228]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axis_register_slice' (12#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:979]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axis_register_slice__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:979]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_axis2vector__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:63]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_axis2vector__parameterized0' (12#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:63]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axisc_register_slice__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:391]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axisc_register_slice__parameterized0' (12#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:391]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_vector2axis__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:228]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_infrastructure_v1_0_util_vector2axis__parameterized0' (12#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:228]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_register_slice_v1_0_axis_register_slice__parameterized0' (12#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:979]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axis_dwidth_converter' (13#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1938]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mm2s_axis_dwidth_converter' (14#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:68170]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_module' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:38829]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_register' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:18712]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_register' (15#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:18712]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_regdirect' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:20526]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_regdirect' (16#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:20526]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_mux' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:29591]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_mux' (17#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:29591]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_module' (18#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:38829]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mngr' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:63815]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sm' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:61558]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sm' (19#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:61558]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_cmdsts_if' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:62697]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_cmdsts_if' (20#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:62697]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sts_mngr' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:63204]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sts_mngr' (21#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:63204]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vidreg_module' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:55739]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vregister' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:53625]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vregister' (22#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:53625]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vaddrreg_mux' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:55216]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vaddrreg_mux' (23#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:55216]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vidreg_module' (24#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:55739]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_genlock_mngr' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:58282]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_greycoder' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:57995]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_greycoder' (25#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:57995]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_genlock_mngr' (26#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:58282]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mngr' (27#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:63815]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_fsync_gen' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:52754]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_fsync_gen' (28#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:52754]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vid_cdc' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:13249]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vid_cdc' (29#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:13249]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sof_gen' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:40980]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sof_gen' (30#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:40980]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mm2s_linebuf' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:45948]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_afifo_builtin' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:43237]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_afifo_builtin' (41#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:43237]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_skid_buf' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:41227]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_skid_buf' (42#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:41227]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized3' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (42#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mm2s_linebuf' (43#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:45948]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_skid_buf__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:41227]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_skid_buf__parameterized0' (43#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:41227]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_s2mm_axis_dwidth_converter' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:68664]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axis_dwidth_converter__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1938]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_upsizer__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1191]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_upsizer__parameterized0' (43#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1191]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_downsizer__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1558]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axisc_downsizer__parameterized0' (43#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1558]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_v6_3_1_axis_dwidth_converter_v1_0_axis_dwidth_converter__parameterized1' (43#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.v:1938]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_s2mm_axis_dwidth_converter' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:68664]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_module__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:38829]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_register__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:18712]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_register__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:18712]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_mux__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:29591]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_mux__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:29591]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_module__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:38829]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mngr__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:63815]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sm__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:61558]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sm__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:61558]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_cmdsts_if__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:62697]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_cmdsts_if__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:62697]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mngr__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:63815]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_fsync_gen__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:52754]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_fsync_gen__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:52754]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_s2mm_linebuf' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:48936]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_afifo_builtin__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:43237]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_afifo_builtin__parameterized0' (44#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:43237]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_s2mm_linebuf' (45#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:48936]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:55410]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:53548]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (46#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:2693]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (47#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (48#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (49#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (50#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (51#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (51#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (51#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (51#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (51#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (52#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:2693]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:13741]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (53#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:13741]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:7411]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (54#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (54#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (55#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:7411]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (55#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (55#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (55#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (55#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (56#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:12180]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:10676]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (57#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:10676]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (57#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (57#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (57#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (57#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (58#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:12180]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:53548]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:49982]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:2693]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status__parameterized0' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:2693]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:17697]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized4' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized4' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized4' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized4' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized4' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized4' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized5' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized5' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized5' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized5' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized5' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized5' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (59#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (60#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:17697]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:25723]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (61#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:25723]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:46998]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized6' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized6' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized6' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized6' (61#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized6' (61#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized6' (61#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (61#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:45105]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:44155]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:42595]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (62#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:42595]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (63#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:44155]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:44844]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (64#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:44844]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized7' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized7' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized7' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized1' (64#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized7' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized7' (64#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized7' (64#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized7' (64#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized7' (64#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (65#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:45105]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (66#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:46998]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:28422]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:23402]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set' (67#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:23402]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1294]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c387/hdl/lib_fifo_v1_0_rfs.vhd:2097]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (83#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c387/hdl/lib_fifo_v1_0_rfs.vhd:2097]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (84#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1294]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1294]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c387/hdl/lib_fifo_v1_0_rfs.vhd:2097]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized0' (93#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c387/hdl/lib_fifo_v1_0_rfs.vhd:2097]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (93#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1294]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:23402]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set__parameterized0' (93#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:23402]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:19492]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (94#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:19492]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:28422]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:15669]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized1' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized1' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized8' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized8' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized8' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized8' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized8' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized8' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized8' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized8' (95#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (96#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:15669]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:18990]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:14112]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (97#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:14112]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (98#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:18990]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (99#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:49982]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (100#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:55410]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma' (101#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/450f/hdl/axi_vdma_v6_3_rfs.vhd:69480]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_in_axi_vdma_0_0' (102#1) [c:/Users/Hamza/Downloads/hdmi-in_2017.2/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_axi_vdma_0_0/synth/hdmi_in_axi_vdma_0_0.vhd:131]
+Finished RTL Elaboration : Time (s): cpu = 00:04:19 ; elapsed = 00:04:41 . Memory (MB): peak = 659.594 ; gain = 392.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:20 ; elapsed = 00:04:42 . Memory (MB): peak = 659.594 ; gain = 392.031
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.203 . Memory (MB): peak = 786.875 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:04:34 ; elapsed = 00:04:58 . Memory (MB): peak = 786.875 ; gain = 519.313
+Finished Loading Part and Timing Information : Time (s): cpu = 00:04:34 ; elapsed = 00:04:58 . Memory (MB): peak = 786.875 ; gain = 519.313
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:04:34 ; elapsed = 00:04:58 . Memory (MB): peak = 786.875 ; gain = 519.313
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:42 ; elapsed = 00:05:08 . Memory (MB): peak = 786.875 ; gain = 519.313
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:58 ; elapsed = 00:05:27 . Memory (MB): peak = 786.875 ; gain = 519.313
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|Module Name          | RTL Object                                                                                                                                                                                                                      | Inference      | Size (Depth x Width) | Primitives   | 
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|U0/I_PRMRY_DATAMOVER | GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/FAMILY_SUPPORTED.I_SYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 8 x 11               | RAM32M x 2   | 
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:08 ; elapsed = 00:05:39 . Memory (MB): peak = 786.875 ; gain = 519.313
+Finished Timing Optimization : Time (s): cpu = 00:05:13 ; elapsed = 00:05:43 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished Technology Mapping : Time (s): cpu = 00:05:16 ; elapsed = 00:05:47 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished IO Insertion : Time (s): cpu = 00:05:17 ; elapsed = 00:05:48 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:17 ; elapsed = 00:05:48 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:18 ; elapsed = 00:05:49 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:18 ; elapsed = 00:05:49 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:18 ; elapsed = 00:05:50 . Memory (MB): peak = 822.332 ; gain = 554.770
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:18 ; elapsed = 00:05:50 . Memory (MB): peak = 822.332 ; gain = 554.770
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    89|
+|2     |FIFO36E1 |    10|
+|3     |LUT1     |   214|
+|4     |LUT2     |   389|
+|5     |LUT3     |   545|
+|6     |LUT4     |   386|
+|7     |LUT5     |   528|
+|8     |LUT6     |   694|
+|9     |MUXF7    |     2|
+|10    |RAM32M   |     2|
+|11    |RAMB18E1 |     1|
+|12    |RAMB36E1 |     1|
+|13    |SRL16E   |   288|
+|14    |FDPE     |    10|
+|15    |FDR      |   319|
+|16    |FDRE     |  3846|
+|17    |FDSE     |    99|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:18 ; elapsed = 00:05:50 . Memory (MB): peak = 822.332 ; gain = 554.770
+synth_design: Time (s): cpu = 00:05:22 ; elapsed = 00:05:55 . Memory (MB): peak = 822.332 ; gain = 562.531

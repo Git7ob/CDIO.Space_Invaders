@@ -1,0 +1,66 @@
+/*
+ * SD_config.h
+ *
+ *  Created on: 20. jan. 2019
+ *      Author: Hamza
+ */
+
+#ifndef SRC_PLATFORM_SD_CONFIG_H_
+#define SRC_PLATFORM_SD_CONFIG_H_
+
+#include "platform.h"
+
+void SDread();
+void SDwrite();
+
+
+void SDread(){
+
+	init_platform();
+
+	result = f_mount(&FS_instance, Path, 1);
+
+
+	sprintf(FileName, "file.txt");
+
+	log_file = (char *) FileName;
+
+	result = f_open(&file, log_file, FA_READ);
+
+	char SDArr[4];
+
+	result = f_read(&file, (void*)(char*)SDArr, sizeof(SDArr), &NumBytesRead);
+
+	printf("read highscore data = %s\n\r", (char*)SDArr);
+
+	result = f_close(&file);
+
+	cleanup_platform();
+}
+
+void SDwrite(int num1,int num2,int num3,int num4){
+
+
+	init_platform();
+
+	result = f_mount(&FS_instance, Path, 1);
+
+	sprintf(FileName, "file.txt");
+
+	log_file = (char*)FileName;
+
+	result = f_open(&file, log_file, FA_CREATE_ALWAYS | FA_WRITE);
+
+	char arr[8];
+
+	sprintf(arr,"%d%d%d%d", num1,num2,num3,num4);
+
+	result = f_write(&file, (const void*)(char*)arr, sizeof(arr), &NumBytesRead);
+
+	result = f_close(&file);
+
+	cleanup_platform();
+}
+
+
+#endif /* SRC_PLATFORM_SD_CONFIG_H_ */

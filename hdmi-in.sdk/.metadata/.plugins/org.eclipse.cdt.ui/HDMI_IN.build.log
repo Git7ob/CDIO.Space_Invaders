@@ -1,0 +1,68 @@
+13:50:35 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:44:0:
+../src/sprites/sprites.h:7:1: warning: data definition has no type or storage class
+ Alien1_1[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~~~
+../src/sprites/sprites.h:7:1: warning: type defaults to 'int' in declaration of 'Alien1_1' [-Wimplicit-int]
+../src/sprites/sprites.h:212:1: warning: data definition has no type or storage class
+ Alien1_2[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~~~
+../src/sprites/sprites.h:212:1: warning: type defaults to 'int' in declaration of 'Alien1_2' [-Wimplicit-int]
+../src/sprites/sprites.h:417:1: warning: data definition has no type or storage class
+ Alien2_1[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~~~
+../src/sprites/sprites.h:417:1: warning: type defaults to 'int' in declaration of 'Alien2_1' [-Wimplicit-int]
+../src/sprites/sprites.h:622:1: warning: data definition has no type or storage class
+ Spaceship[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~~~~
+../src/sprites/sprites.h:622:1: warning: type defaults to 'int' in declaration of 'Spaceship' [-Wimplicit-int]
+../src/sprites/sprites.h:942:1: warning: data definition has no type or storage class
+ Player[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~
+../src/sprites/sprites.h:942:1: warning: type defaults to 'int' in declaration of 'Player' [-Wimplicit-int]
+../src/sprites/sprites.h:1147:1: warning: data definition has no type or storage class
+ DeathPlayer[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~~~~~~
+../src/sprites/sprites.h:1147:1: warning: type defaults to 'int' in declaration of 'DeathPlayer' [-Wimplicit-int]
+../src/sprites/sprites.h:1352:1: warning: data definition has no type or storage class
+ DeathAlien[]= {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~~~~~~~
+../src/sprites/sprites.h:1352:1: warning: type defaults to 'int' in declaration of 'DeathAlien' [-Wimplicit-int]
+../src/sprites/sprites.h:1557:1: warning: data definition has no type or storage class
+ Shot[] = {0,128,0,0,128,0,0,128,0,0,128,0,0,128,0,
+ ^~~~
+../src/sprites/sprites.h:1557:1: warning: type defaults to 'int' in declaration of 'Shot' [-Wimplicit-int]
+../src/video_demo.c: In function 'DefineAlien':
+../src/video_demo.c:398:6: warning: unused variable 'offset' [-Wunused-variable]
+  u32 offset;     //offset of enemy relative to the enemy on the left hand side
+      ^~~~~~
+../src/video_demo.c: In function 'DrawSprites':
+../src/video_demo.c:503:7: warning: variable 'margin' set but not used [-Wunused-but-set-variable]
+   u32 margin;
+       ^~~~~~
+../src/video_demo.c: In function 'DrawDeathAlien':
+../src/video_demo.c:583:9: warning: variable 'margin' set but not used [-Wunused-but-set-variable]
+     u32 margin;
+         ^~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/platform/platform.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 158656	  99068	1872736	2130460	 20821c	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+
+13:50:37 Build Finished (took 1s.651ms)
+
